@@ -39,7 +39,7 @@ router.beforeEach(async (to, from, next) => {
         next()
     }else{
         const res = await isAuth()
-        console.log('res',res.data);
+        // console.log('res',res.data);
         if(res.data.status){
             store.user=res.data.data;
             next()
